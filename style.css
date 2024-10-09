@@ -1,0 +1,210 @@
+/* General setup; do not change the given CSS code. Add your own CSS code at the bottom! */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    min-width: 1000px;
+    max-width: 1400px;
+}
+
+/* Layout */
+
+section {
+    float: left;
+    width: 50%;
+}
+
+aside {
+    float: left;
+    width: 30%;
+}
+
+nav {
+    float: left;
+    width: 20%;
+}
+
+footer {
+    clear: both;
+}
+
+header,
+section,
+aside,
+nav,
+footer {
+    padding: 20px;
+}
+
+/* header and footer */
+
+header,
+footer {
+    border-top: 10px solid var(--border);
+    border-bottom: 10px solid var(--border);
+}
+
+/* WRITE YOUR CODE BELOW HERE */
+
+/* https://colorhunt.co/palette/706233b0926ae1c78ffae7c9 */
+:root {
+    --bg: #706233;
+    --bg2: #FAE7C9;
+    --border: #E1C78F;
+    --text: black;
+    caret-color: transparent;
+}
+
+/* general */
+body {
+    background-color: var(--bg);
+    font-size: 1.2rem;
+    line-height: 2rem;
+    word-spacing: 0.2rem;
+    letter-spacing: 0.08rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: var(--text);
+}
+
+div {
+    background-color: var(--bg2);
+}
+
+h2 {
+    font-size: x-large;
+    text-align: center;
+}
+
+ol {
+    list-style-type: lower-roman;
+}
+
+ul::not(nav) {
+    list-style-type: georgian;
+}
+
+section a,
+aside a {
+    color: var(--bg);
+    font-weight: bold;
+}
+
+section a:visited,
+aside a:visited {
+    color: var(--border);
+    font-weight: normal;
+}
+
+section a:focus,
+aside a:focus {
+    text-decoration: none;
+    font-weight: normal;
+}
+
+section a:hover,
+aside a:hover {
+    text-decoration: none;
+}
+
+a[href^="http"]::after {
+    content: "";
+    display: inline-block;
+    width: 0.8em;
+    height: 0.8em;
+    margin-left: 0.25em;
+    background-size: 100%;
+    background-image: url("external-link-52.png");
+}
+
+/* header */
+header {
+    font-size: x-large;
+    text-align: center;
+}
+
+header h1 {
+    letter-spacing: 5px;
+    color: var(--text);
+    --end-color: var(--text);
+    animation: banner-fade 2s;
+}
+
+header h1 span {
+    color: var(--bg);
+    --end-color: var(--bg);
+    animation: banner-fade 2s;
+}
+
+@keyframes banner-fade {
+    0% { color: var(--bg2); }
+    100% { color: var(--end-color); }
+}
+
+/* home buttons */
+nav ul {
+    list-style-type: none;
+    animation: list-fade 1s;
+}
+
+nav li {
+    width: 100%;
+    border-style: solid;
+    border-radius: 20px;
+    margin: 30px 0;
+    line-height: 2.5rem;
+    background-color: var(--border);
+}
+
+nav li:nth-child(1) {
+    animation: swoop-in 1s;
+}
+
+nav li:nth-child(2) {
+    animation: swoop-in 1.2s;
+}
+
+nav li:nth-child(3) {
+    animation: swoop-in 1.4s;
+}
+
+nav li:nth-child(4) {
+    animation: swoop-in 1.6s;
+}
+
+nav li:nth-child(5) {
+    animation: swoop-in 1.8s;
+}
+
+nav li:nth-child(6) {
+    animation: swoop-in 2s;
+}
+
+nav li:hover {
+    border-style: dotted;
+}
+
+@keyframes swoop-in {
+    from { transform: translate3d(20%, 0, 0); }
+    to { transform: translate3d(0, 0, 0); }
+}
+
+@keyframes list-fade {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+nav li a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    font-size: large;
+    color: var(--text);
+}
+
+/* section */
+section p:not(:nth-of-type(4)) {
+    text-indent: 50px;
+}
